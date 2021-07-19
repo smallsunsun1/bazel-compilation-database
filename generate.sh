@@ -24,20 +24,6 @@ set -e
 
 source_dir=0
 
-usage() {
-  printf "usage: %s flags\nwhere flags can be:\n" "${BASH_SOURCE[0]}"
-  printf "\t-s\tuse the original source directory instead of bazel execroot\n"
-  printf "\n"
-}
-
-while getopts "sh" opt; do
-  case "${opt}" in
-    "s") source_dir=1 ;;
-    "h") usage; exit 0;;
-    *) >&2 echo "invalid option ${opt}"; exit 1;;
-  esac
-done
-
 # This function is copied from https://source.bazel.build/bazel/+/master:scripts/packages/bazel.sh.
 # `readlink -f` that works on OSX too.
 function get_realpath() {
