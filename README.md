@@ -21,12 +21,12 @@ somewhere in your PATH.
 For example,
 ```sh
 INSTALL_DIR="/usr/local/bin"
-VERSION="0.4.5"
+VERSION="0.4.6"
 
 # Download and symlink.
 (
   cd "${INSTALL_DIR}" \
-  && curl -L "https://github.com/grailbio/bazel-compilation-database/archive/${VERSION}.tar.gz" | tar -xz \
+  && curl -L "https://github.com/smallsunsun1/bazel-compilation-database/archive/${VERSION}.tar.gz" | tar -xz \
   && ln -f -s "${INSTALL_DIR}/bazel-compilation-database-${VERSION}/generate.sh" bazel-compdb
 )
 
